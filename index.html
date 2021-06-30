@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Practice Session</title>
+	
+	<style> 
+		input[type=text] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+		}
+		body
+		{
+			background-color: gray;
+		}
+		h1
+		{
+			margin: 10px 0;
+			text-align: center;
+		}
+		
+		p
+		{
+			text-align: center;
+			text-decoration: bolder;
+		}
+		
+		button
+		{
+			width: 10%;
+			padding: 12px 20px;
+			box-sizing: border-box;	
+			margin: 0 auto;
+			display: block;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<h1>Welcome to Age <b>Calculator</b></h1>
+	<p>Are you struggling to count ages of people?<br>Oh yeah, this is the application for you.</p>
+	<p id="show"></p>
+	
+		<label for="fname">First Name</label>
+		<input id="lebitso" type="text" id="fname" name="fname">
+		<label for="fname">Birth Year</label>
+		<input id="txtNumber" type="text" id="lname" name="byear" value="">
+		<button onclick="add()">Current Age</button>
+		<p id="demo"></p>
+	
+	
+	
+	<script>
+		function add()
+		{
+			var naam = document.getElementById("lebitso");
+			var txtNumber = document.getElementById("txtNumber");
+			var dat = new Date();
+			var newNumber = dat.getFullYear() - parseInt(txtNumber.value);
+
+			document.getElementById("demo").innerHTML = naam.value+" \nYour Age is "+newNumber+".";
+		}
+	</script>
+</body>
+
+</html>
